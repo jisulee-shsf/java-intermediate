@@ -2,17 +2,17 @@ package collection.array;
 
 import java.util.Arrays;
 
-public class MyArrayListV1 {
+public class MyArrayListV2 {
     private static final int DEFAULT_CAPACITY = 5;
 
     private Object[] elementData;
     private int size = 0;
 
-    public MyArrayListV1() {
+    public MyArrayListV2() {
         elementData = new Object[DEFAULT_CAPACITY];
     }
 
-    public MyArrayListV1(int initialCapacity) {
+    public MyArrayListV2(int initialCapacity) {
         elementData = new Object[initialCapacity];
     }
 
@@ -21,8 +21,25 @@ public class MyArrayListV1 {
     }
 
     public void add(Object element) {
+        if (size == elementData.length) {
+            grow();
+        }
+
         elementData[size] = element;
         size++;
+    }
+
+    private void grow() {
+        int oldCapacity = elementData.length;
+        int newCapacity = oldCapacity * 2;
+
+        /*
+        Object[] newArr = new Object[newCapacity];
+        for (int i = 0; i < elementData.length; i++) {
+            newArr[i] = elementData[i];
+        }
+        */
+        elementData = Arrays.copyOf(elementData, newCapacity);
     }
 
     public Object get(int index) {
