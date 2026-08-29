@@ -1,6 +1,6 @@
 package collection.link;
 
-public class NodeMain {
+public class NodeMain1 {
     public static void main(String[] args) {
         // 노드 생성 및 연결
         Node first = new Node("A");
