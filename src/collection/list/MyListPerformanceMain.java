@@ -73,7 +73,7 @@ public class MyListPerformanceMain {
             myList.get(index);
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("getIndex - loop: " + loop + ", index: " + index + ", 계산 시간: " + (endTime - startTime) + "ms");
+        System.out.println("getIndex - 반복: " + loop + ", index: " + index + ", 계산 시간: " + (endTime - startTime) + "ms");
     }
 
     private static void search(MyList<Integer> myList, int loop, int findValue) {
@@ -82,6 +82,6 @@ public class MyListPerformanceMain {
             myList.indexOf(findValue);
         }
         long endTime = System.currentTimeMillis();
-        System.out.println("search - loop: " + loop + ", findValue: " + findValue + ", 계산 시간: " + (endTime - startTime) + "ms");
+        System.out.println("search - 반복: " + loop + ", findValue: " + findValue + ", 계산 시간: " + (endTime - startTime) + "ms");
     }
 }
