@@ -11,5 +11,10 @@ public class MyArrayMain {
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " "); // 1 2 3 4
         }
+
+        System.out.println();
+        for (int value : myArray) {
+            System.out.print(value + " "); // 1 2 3 4
+        }
     }
 }
